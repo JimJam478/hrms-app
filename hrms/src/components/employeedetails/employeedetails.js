@@ -1,15 +1,17 @@
 import React,{ useState, useEffect} from 'react';
 import axios from "axios";
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import EmployeeList from '../employeelist/employeelist';
 import "./employeedetails.css";
 import LeaveForm from '../leaveform/leaveform';
 import { Navigation } from '../navigation/navigation';
-import ProfilePic from '../profilepic/profilepic';
+
+
 
 export default function EmployeeDetails() {
     const {id} = useParams()
     const URL = `http://localhost:5000/employees/${id}`;
+    const navigate = useNavigate();
     console.log(id)
     const [employeeData, setEmployeeData] = useState(null);
     const [error, setError] = useState(false);
@@ -26,18 +28,20 @@ export default function EmployeeDetails() {
             console.error('Error fetching employee data:', error);
           });
         }
-    }, [id,newEmployeeDetails]) 
+    }, [id,newEmployeeDetails, URL]); 
 
     const handleNewEmployeeDetails = () => {
       setNewEmployeeDetails(prevState => !prevState);
     };
 
     if (error) {
-      history.push('/error');
+      navigate('/error');
       return null;
     }
 
     if (!employeeData) return null; 
+   
+
     return (
       <div className='container'>
             <div className="row">
@@ -50,9 +54,9 @@ export default function EmployeeDetails() {
                 </div>
                 <div className="col-7">
                   {employeeData.map((data) => (
-                  <div>
+                  <div> 
                     <div>
-                      <br />
+                      <br />  
                         <h1 id='header'> Details for {data.fname} {data.lname}</h1>
                         <h2 id='header'> {data.title} </h2>
                       <br />
@@ -98,7 +102,7 @@ export default function EmployeeDetails() {
                   </div>
               </div>) )}
               <br />
-              <LeaveForm />
+              <LeaveForm onLeaveSubmit={handleNewEmployeeDetails} />
               <br />
               <Navigation />      
             </div>
