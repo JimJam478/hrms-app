@@ -1,10 +1,9 @@
 
-
 export default function ErrorPage() {
-
     return(
-        <>
-        <h1 style={{color: "aliceblue"}}>ERROR 404: Employee ID not found</h1>
-        </>
+        <div>
+        <h1 style={{color: "red",paddingTop: "400px"}}>ERROR 404: Employee ID not found</h1>
+
+        </div>
     )
 }
