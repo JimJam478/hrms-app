@@ -1,4 +1,9 @@
-#header_about {
-    padding-top: 400px;
+#about {
     color: aliceblue;
+    text-align: left;
+}
+
+
+#about-container{
+    padding-top: 200px ;
 }
