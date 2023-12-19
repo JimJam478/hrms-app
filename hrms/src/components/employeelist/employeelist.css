@@ -1,0 +1,51 @@
+#scroll {
+    height: 900px; 
+    overflow-y:  scroll;
+}
+
+#container{
+    float: left;
+}
+
+
+.emp {
+    color: aliceblue;
+    text-align: left;
+    display: table;
+}
+
+.header{
+    color: aliceblue;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: table;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+
+#link-style{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.list-style:focus {
+    color: black;
+    background-color: #FFE81F;    
+}
+
+.list-style:hover{
+    color:  #FFE81F; 
+    text-decoration:none; 
+    cursor:pointer;
+}
+
+.list-style.active {
+    color: black;
+    background-color: #FFE81F;
+}

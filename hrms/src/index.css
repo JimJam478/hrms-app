@@ -12,3 +12,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@-moz-document url-prefix() {
+  /* Firefox-specific styles go here */
+  body {
+    line-height: 1;
+  }
+}

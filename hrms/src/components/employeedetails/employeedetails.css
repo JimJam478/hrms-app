@@ -1,0 +1,35 @@
+#emp_list{
+    border-right:1px solid black;
+}
+
+#header{
+    color: aliceblue;
+    text-align: left;
+    padding-left: 80px;
+
+}
+
+#emp{
+    color:aliceblue;
+    text-align: left;
+}
+
+#table{
+    padding-left: 80px;
+}
+
+#emp-detail{
+    color: aliceblue;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.card-body{
+    background-color: black;
+
+}
+
+#leave{
+    color: aliceblue;
+    text-align: left;
+}
