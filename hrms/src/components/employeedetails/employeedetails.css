@@ -33,3 +33,20 @@
     color: aliceblue;
     text-align: left;
 }
+
+.leaves-remaining {
+    color: #008000; 
+  }
+  
+  .leaves-remaining-zero {
+    color: #ff0000; 
+  }
+
+  .employee-details {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .employee-details.loaded {
+    opacity: 1;
+  }

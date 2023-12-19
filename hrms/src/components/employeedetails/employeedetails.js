@@ -38,10 +38,9 @@ export default function EmployeeDetails() {
       navigate('/error');
       return null;
     }
-
+    
     if (!employeeData) return null; 
-   
-
+    
     return (
       <div className='container'>
             <div className="row">
@@ -53,6 +52,7 @@ export default function EmployeeDetails() {
                     </div>
                 </div>
                 <div className="col-7">
+                  <br/>
                   {employeeData.map((data) => (
                   <div> 
                     <div>
@@ -94,7 +94,7 @@ export default function EmployeeDetails() {
                           </tr>
                           <tr>
                             <th id='emp'> Leaves Remaining: </th>
-                            <td id='emp-detail'> {data.leaves_remaining}</td>
+                            <td id='emp-detail' style={{ color: data.leaves_remaining === 0 ? '#ff3131' : '#08FF08' }}> {data.leaves_remaining}</td>
                           </tr>
                         </table>
                       </div>
