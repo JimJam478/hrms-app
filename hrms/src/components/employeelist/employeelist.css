@@ -7,7 +7,6 @@
     float: left;
 }
 
-
 .emp {
     color: aliceblue;
     text-align: left;
@@ -34,18 +33,18 @@
     text-decoration: none;
 }
 
-.list-style:focus {
-    color: black;
-    background-color: #FFE81F;    
+#link-style:hover{
+    color:#000000;
+    text-decoration: none;
 }
 
-.list-style:hover{
-    color:  #FFE81F; 
-    text-decoration:none; 
-    cursor:pointer;
-}
-
-.list-style.active {
-    color: black;
-    background-color: #FFE81F;
-}
+.emp:hover {
+    background-color: #0D6EFD; 
+    cursor: pointer;
+  }
+  
+ 
+  .emp:hover a {
+    color: #000000; 
+    text-decoration: underline;
+  }
