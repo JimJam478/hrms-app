@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 const baseURL = "http://localhost:5000/employees"
 
 export default function EmployeeList() {
-  const [currentEmployeeId, setCurrentEmployeeId] = useState(null)
-  console.log(currentEmployeeId)
   const [employees, setEmployees] = useState(null);
   const fetchData = async () => {
     axios.get(baseURL).then((response) => {

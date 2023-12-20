@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import EmployeeDetails from "../employeedetails/employeedetails";
 import axios from "axios";
 import './leaveform.css'
 
