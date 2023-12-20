@@ -11,18 +11,18 @@ import ErrorPage from './components/error/error';
 function App() {
   return (
     <div className="App">
-        <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/employees" element={<EmployeeList2/>} /> 
-      <Route path="/about" element={<About />} />
-      <Route path="/error" element={<ErrorPage />} />
-      <Route path="*" element={ <Navigate to="/" /> } />
-      <Route path="/employees/:id" element={<EmployeeDetails />}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/employees" element={<EmployeeList2 />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/error" element={<ErrorPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/employees/:id" element={<EmployeeDetails />}
           render={({ params }) => <EmployeeDetails id={params.id} />}
         />
-    </Routes> 
-      
+      </Routes>
+
     </div>
   );
 }
