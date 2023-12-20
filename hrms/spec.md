@@ -1,5 +1,5 @@
-HRMS Web App
-Created by: Allen K
+# HRMS Web App
+## Created by: Allen K
 
 Web application of HR Management system.
 
