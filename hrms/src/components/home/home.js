@@ -2,10 +2,10 @@ import './home.css'
 
 
 export default function Home() {
-    return (
+  return (
     <>
-    <img src="./starwars.png" id="welcome"/>
-    
+      <img src="./starwars.png" id="welcome" />
+
     </>
   );
 } 

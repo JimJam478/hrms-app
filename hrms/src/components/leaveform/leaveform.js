@@ -19,7 +19,7 @@ const LeaveForm = ({ onLeaveSubmit }) => {
     try {
       const response = await axios.post(
         `http://localhost:5000/employees/${id}`,
-        leaveData, 
+        leaveData,
         {
           headers: {
             "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const LeaveForm = ({ onLeaveSubmit }) => {
         alert("Leave submitted successfully");
         onLeaveSubmit();
       } else {
-        alert("Failed to submit leave", response.data.message); 
+        alert("Failed to submit leave", response.data.message);
       }
     } catch (error) {
       alert("Leave already taken", error);
@@ -40,26 +40,26 @@ const LeaveForm = ({ onLeaveSubmit }) => {
 
   return (
     <div>
-    <h3 id="header"> Add leave: </h3>
-    <br />
-    <form onSubmit={handleSubmit} method={"post"} className="row g-3 needs-validation">
+      <h3 id="header"> Add leave: </h3>
+      <br />
+      <form onSubmit={handleSubmit} method={"post"} className="row g-3 needs-validation">
         <div className="col-md-4">
-          <label style={{color: "aliceblue",fontWeight: "bold"}} for="validationCustom01">Date: </label>
-            <div style={{paddingLeft: "100px"}} className="input-group has-validation">
-              <input type={"date"} className="form-control" id="validationCustom01" name="date" value={leaveData.date} onChange={handleFormInput} required />
-            </div>
+          <label style={{ color: "aliceblue", fontWeight: "bold" }} for="validationCustom01">Date: </label>
+          <div style={{ paddingLeft: "100px" }} className="input-group has-validation">
+            <input type={"date"} className="form-control" id="validationCustom01" name="date" value={leaveData.date} onChange={handleFormInput} required />
+          </div>
         </div>
         <div className="col-md-4">
-          <label style={{paddingLeft: "25px",color: "aliceblue",fontWeight: "bold"}} for="validationCustom02">Reason: </label>
-            <div style={{paddingLeft: "100px"}} className="input-group has-validation">
-              <input type="text" className="form-control" id="validationCustom02" value={leaveData.reason} name="reason" onChange={handleFormInput} required />
-            </div>
+          <label style={{ paddingLeft: "25px", color: "aliceblue", fontWeight: "bold" }} for="validationCustom02">Reason: </label>
+          <div style={{ paddingLeft: "100px" }} className="input-group has-validation">
+            <input type="text" className="form-control" id="validationCustom02" value={leaveData.reason} name="reason" onChange={handleFormInput} required />
+          </div>
         </div>
-       <div style={{paddingLeft: "290px"}} className="col-10">
+        <div style={{ paddingLeft: "290px" }} className="col-10">
           <button className="btn btn-outline-light" type="submit">Submit</button>
-      </div>
+        </div>
       </form>
-  </div>
+    </div>
   );
 };
 
